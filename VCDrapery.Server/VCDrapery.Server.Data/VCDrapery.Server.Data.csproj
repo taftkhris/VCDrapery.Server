@@ -5,13 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    <Compile Remove="Migrations\20191112142300_AddFieldsToQuoteLineItems.cs" />
+    <Compile Remove="Migrations\20191112142300_AddFieldsToQuoteLineItems.Designer.cs" />
+    <Compile Remove="Migrations\20191112142725_AddFieldsToQuoteLineItems.cs" />
+    <Compile Remove="Migrations\20191112142725_AddFieldsToQuoteLineItems.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\" />
-    <Folder Include="Models\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
   </ItemGroup>
 
 </Project>

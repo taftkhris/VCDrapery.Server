@@ -10,7 +10,9 @@ namespace VCDrapery.Server.Business
     {
         public MappingProfile()
         {
-
+            CreateMap<CustomerModel, Data.Models.Customers>().ReverseMap();
+            CreateMap<QuoteLineItemModel, Data.Models.QuoteLineItem>().ReverseMap();
+            CreateMap<QuoteModel, Data.Models.Quote>().ReverseMap();
         }
     }
 }

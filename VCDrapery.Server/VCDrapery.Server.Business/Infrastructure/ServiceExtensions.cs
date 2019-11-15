@@ -17,15 +17,15 @@ namespace VCDrapery.Server.Business
         public static void ConfigureAppServices(this IServiceCollection services, IConfiguration configuration)
         {
             // Provide your services and repositories IOC configuration here
-            //services.AddScoped<ISampleService, SampleService>();
-            //services.AddScoped<ISampleRepository, SampleRepository>();
+            services.AddScoped<IDraperyService, DraperyService>();
+            services.AddScoped<IDraperyRepository, DraperyRepository>();
 
             // Automapper
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             // Provide your Database context configuration here
-            //services.AddScoped<ISampleDatabaseContext, SampleDatabaseContext>();
-            //services.AddDbContext<SampleDatabaseContext>(options => options.UseSqlServer(configuration.GetConnectionString("SampleDatabaseContext connection string")));
+            services.AddScoped<IDatabaseContext, DraperyContext>();
+            services.AddDbContext<DraperyContext>(options => options.UseSqlServer(configuration.GetConnectionString("LocalDB")));
         }
     }
 }
